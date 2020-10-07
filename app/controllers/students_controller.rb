@@ -9,7 +9,11 @@ class StudentsController < ApplicationController
   end
 
   def new
-    #@student.create(params[student[first_name]])
+    @student.new
+  end
+
+  def create
+    @student = Student.create
   end
 
 end

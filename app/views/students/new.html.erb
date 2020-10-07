@@ -1,17 +1,12 @@
 <h1>Student Form</h1>
-<%= form_for :student do |f| %>
+<%= form_for student do |f| %>
   <p>
     <%= f.label :Name %><br>
-    <%= f.text_field :First_name %><br>
-    <%= f.text_field :Last_name %>
+    <%= text_field_tag 'student[first_name]' %><br>
+    <%= text_field_tag 'student[last_name]' %>
   </p>
 
   <p>
-    <%= f.label :Address %><br>
-    <%= f.text_area :text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
+    <%= f.submit "Submit Student" %>
   </p>
 <% end %>
