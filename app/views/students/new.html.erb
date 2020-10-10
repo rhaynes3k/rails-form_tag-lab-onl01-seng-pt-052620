@@ -1,8 +1,8 @@
 <h1>Student Form</h1>
-<%= form_for student do |f| %>
+<%= form_tag scope: :students do |f| %>
   <p>
-    <%= f.label :Name %><br>
-    <%= text_field_tag 'student[first_name]' %><br>
+    <%= f.label :name %><br>
+    <%= text_field_tag (:student[first_name]) %><br>
     <%= text_field_tag 'student[last_name]' %>
   </p>
 
